@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Big O Notation Review"
+date:   2017-01-27 12:53:41 -0500
+categories: algorithms
+---
+
+# What is Big O Notation?
+
+If you're reading this, you might have forgotten all about big O notation. That's fine, this should serve as a good refresher!
+
+Big O notation is a way to measure the efficiency of an algorithm. It's not about measuring speed but about its number of operations! It helps you understand how efficient (or inefficent) a piece of code is. This is surely imporant for code you write but it's also important to be aware of the efficency of any dependency you inject into your own code.
+
+# Logarithm Review
+When taking about Big O notation, log is usually implicitly referring to log<sub>2</sub>
+
+You can think of logs as the reverse of exponents. What do we have to raise 2 by get the 2nd number?
+
+|-----|-----|----|----|
+|log<sub>2</sub>|32|=|5|
+|log<sub>2</sub>|8|=|2|
+
+
