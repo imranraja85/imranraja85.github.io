@@ -5,13 +5,28 @@ date:   2017-01-27 12:53:41 -0500
 categories: algorithms
 ---
 
+If you're like me you may have forgotten all about Big O Notation. This post aims to serve as a refresher for myself and hopefully others.
+
 # What is Big O Notation?
 
-If you're reading this, you might have forgotten all about big O notation. That's fine, this should serve as a good refresher!
+Big O notation is used to measure the efficiency of an algorithm. It does not measure speed rather it measures the number of operations in terms of its growth. It helps you understand how efficient (or inefficent) some an algorithm performs. This is good to know for both your own code as well as any dependencies you use.
 
-Big O notation is a way to measure the efficiency of an algorithm. It's not about measuring speed but about its number of operations! It helps you understand how efficient (or inefficent) a piece of code is. This is surely imporant for code you write but it's also important to be aware of the efficency of any dependency you inject into your own code.
+# What _exactly_ does Big O Notation represent?
+Big O notation describes the worst case for an algorithm. We aren't interested in whether or not you found an item on the first or second try. It's all about the _worst case_. If you need to search 8 unsorted boxes for a unique value, in the worst case you would need to so search all 8 boxes, which is O(n) where n is total number of boxes. In mathematical terms worst case is synonomous with _upper bound_.
 
-# Logarithm Review
+# Constant Time
+
+I find the easiest Big O representation to understand is something know as constant time. The most common example of this is a hash lookup. Given a key, you only need to look up one field thus its known as contant time: O(1)
+
+# Linear Time
+
+Looking up an element by searching through _all_ the elements exactly once is known as _linear time_. Which is represented as: O(n)
+
+# Log Time
+
+If you have a sorted list of elements, you can use a binary search algorithm which is: O(logn)
+
+## Log Review
 When taking about Big O notation, log is usually implicitly referring to log<sub>2</sub>
 
 You can think of logs as the reverse of exponents. What do we have to raise 2 by get the 2nd number?
@@ -21,3 +36,31 @@ You can think of logs as the reverse of exponents. What do we have to raise 2 by
 |log<sub>2</sub>|8|=|2|
 
 
+# Common Big O Notation Times
+
+|Notation|Example|Term|
+|-----|-----|----|----|
+|O(1)|hash lookup|constant time|
+|O(log n)|binary search|log time|
+|O(n)|simple search|linear time|
+|O(n * log n)|quick sort||
+|O(n<sup>2</sup>)|selection||
+|O(n!)|recursive|factorial time|
+
+
+# Remember these:
+
+|---|---|
+|2<sub>0</sub>|1|
+|2<sub>1</sub>|2|
+|2<sub>2</sub>|4|
+|2<sub>3</sub>|8|
+|2<sub>4</sub>|16|
+|2<sub>5</sub>|32|
+|2<sub>6</sub>|64|
+|2<sub>7</sub>|128|
+|2<sub>8</sub>|256|
+|2<sub>9</sub>|512|
+|2<sub>10</sub>|1024|
+|2<sub>11</sub>|2048|
+|2<sub>12</sub>|4096|
