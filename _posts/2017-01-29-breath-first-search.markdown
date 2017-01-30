@@ -14,21 +14,22 @@ It's helpful to understand what a graph is before going into Breadth First Searc
 # Breadth First Search
 
 
-It is helpful to think of a graphic when performing a BFS. It helps you answer questions like: Is there a path from node A to node B? What is the shortest path?
+It is helpful to visualize a graph when performing a BFS. It helps you answer questions like: Is there a path from node A to node B? What is the shortest path?
 
-How does it work?
+## How does it work?
 It works by searching a nodes first degree connections first; that is all the edges connected directly to a node.
 
-How do you implement a BFS?
+## How do you implement a BFS?
 A hash is a great data structure to represent a BFS model. A key can present a node and its value (really an array holding values) can represent all its edges.
 
 family['imran'] = ['suraya', 'zain', 'tarek']
 
 _directed graph_: a one way relationship between nodes ( has arrows )
+
 _undirected graph_: a two way relationship between the nodes is equal ( no arrows )
 
 
-What is BSF running time?
+## What is BFS running time?
 
 If you end up searching every node (i.e. visting every edge ), the running time is O( number of edges )
 
