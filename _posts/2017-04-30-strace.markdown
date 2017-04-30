@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Strace"
+title:  "How to use strace"
 date:   2017-04-30 12:53:41 -0500
 categories: systems linux
 ---
 
-# Strace
-
 # System Call
-System calls is the interface of your operating system. Whether or not you are aware, the app you write is really issuing a number of these system calls to perform different actions: making a http request, writing a csv file etc.
+System calls are the interface of your operating system. Whether or not you are aware, the app you write is really issuing a number of these system calls to perform different actions: making a http request, writing a csv file etc.
 
 ## The open system call
 To see what files your app is opening:
