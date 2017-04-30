@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Strace"
+date:   2017-04-30 12:53:41 -0500
+categories: systems linux
+---
+
+# Strace
+
+# System Call
+System calls is the interface of your operating system. Whether or not you are aware, the app you write is really issuing a number of these system calls to perform different actions: making a http request, writing a csv file etc.
+
+## The open system call
+To see what files your app is opening:
+`strace -e open cat hello.txt`
+
+## The write system call
+To see what files are being written to:
+`strace -e write echo 'hello' > important.txt`
+
+## The connection system call
+To show every IP your app connects to:
+`strace -e connect`
+
+## Inbound/outbound network activity 
+To debug network activity, perhaps a http service
+`strace -e sendto`
+`strace -e recvfrom`
+
+## execve
+To find out what cmd is being executed with with args
+`strace -e execve`
