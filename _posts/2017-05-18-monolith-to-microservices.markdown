@@ -71,14 +71,72 @@ A good analogy is being agile. You have different methodologies (microservices) 
 
 The first question you should yourself is _why do you want to adopt microservice?_ If you can answer this, then you know where to start.
 
-A few possible reasons:
+A few possible goals:
 
  * Ship Faster
  * Improve Autonomy
  * Scale your Apps
 
 >
-> Tip: Make a statement of an outcome you will achieve that will positively affect your customers.
+> Tip: Make a statement of an outcome you will achieve that will positively affect your customers. Goals should 
+>      be stated in how they affect the customer.
 >
 
+Once you know why you want something and have come up with a goal, you should come up with some metrics to track its progress.
+
+#### Improve Autonomy
+
+Let's say you decided you want to increase the freedom you give people to do their job. This has a number of immediate benefits:
+ * Reduces the amount of sign off
+ * Reduces amount of coordination
+ * You can come up with new ideas and ship them faster
+
+## What can you track?
+ * # of deployments
+ * failure rate
+ * # of meetings
+ * cycle time (how long does it take to go from code to production)
+
+Team provisioned infrastructure
+Better Testing
+
+#### Scale Your Apps
+
+Functionally decompose your monolith to allow latency and load sensitive parts of your application be scaled independently.
+
+
+## What can you track?
+ * latency
+ * load
+ * failure rate
+ * vertical scaling
+ * horizontal scaling
+ * data partitioning
+ * reverse proxies
+
+#### People
+
+A lot of change involves people and teams. Some people will love this, others will not.
+
+>
+> Tip: Understand the impact of people. Data isn't more important than feelings. Periodically reflect
+>      On how people fee.
+
+How to do periodic checks?
+
+ 1) Restate the goal your trying to achieve
+ 1) Reflect on whether or not your are getting there
+ 1) What the team thinks about it
+ 1) Decide what to change
+
+
+#### Your Customers
+You are making changes to a system that is already providing value. Be mindful of the customer experience during a migration.
+
+Change is inevitable. Our systems need to be malleable and flexible. Refactoring is about code. Apply that to architecture as well.
+You need to get good at incremental change of your architecture.
+
+>
+> Build features for today and the platform for tomorrow
+>
 
