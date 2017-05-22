@@ -44,8 +44,41 @@ A good analogy is being agile. You have different methodologies (microservices) 
 
 ### Why use microservices?
 
+## Pros:
+
  * _autonomy_: You allow individuals and teams to move quickly. You can also scale the team easier with a smaller codebase. More importantly, this provides
                a sense of __empowerment__. Decision making is moved to teams without the need to consult external teams that would be affected (with exceptions)
 
+ * _new tech_: What happens inside of your box is less important than its interface. This gives you the freedom of choosing what language or persistence layer best suits your
+               service.
+
+ * _security_: Makes defense easier. You can segment your databases and separate out PII. This does make things a little harder too. Now that you communicate over the
+               network instead of over process, you have to keep an eye on what you transmit.
+
+ * _scale_: You can easily scale your application. You can also achieve multi-tenacy a little easier.
+
+## Cons:
+ 
+ * _Cognitive Overload_: As your microservice architecture evolves, there is a lot of keep track of. Tooling, Configuration, Discovery, Routing, Observability,
+                         Datastores, Orchestration & Deployment, Development, Policy: Architecture & Sec. Compliance.
+
+>
+> Tip: Microservices are not ideal for a new startup. The domain model shifts around as you are trying out a new model. This would be a good time to stick with
+>     a monolith.
+>
+
+### Planning a Transition
+
+The first question you should yourself is _why do you want to adopt microservice?_ If you can answer this, then you know where to start.
+
+A few possible reasons:
+
+ * Ship Faster
+ * Improve Autonomy
+ * Scale your Apps
+
+>
+> Tip: Make a statement of an outcome you will achieve that will positively affect your customers.
+>
 
 
