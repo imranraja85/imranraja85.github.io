@@ -84,7 +84,7 @@ A few possible goals:
 
 Once you know why you want something and have come up with a goal, you should come up with some metrics to track its progress.
 
-#### Improve Autonomy
+### Improve Autonomy
 
 Let's say you decided you want to increase the freedom you give people to do their job. This has a number of immediate benefits:
  * Reduces the amount of sign off
@@ -92,20 +92,19 @@ Let's say you decided you want to increase the freedom you give people to do the
  * You can come up with new ideas and ship them faster
 
 ## What can you track?
- * # of deployments
+ * number of deployments
  * failure rate
- * # of meetings
+ * number of meetings
  * cycle time (how long does it take to go from code to production)
 
 Team provisioned infrastructure
 Better Testing
 
-#### Scale Your Apps
+## Scale Your Apps
 
 Functionally decompose your monolith to allow latency and load sensitive parts of your application be scaled independently.
 
-
-## What can you track?
+### What can you track?
  * latency
  * load
  * failure rate
@@ -114,7 +113,7 @@ Functionally decompose your monolith to allow latency and load sensitive parts o
  * data partitioning
  * reverse proxies
 
-#### People
+### People
 
 A lot of change involves people and teams. Some people will love this, others will not.
 
@@ -130,7 +129,7 @@ How to do periodic checks?
  1) Decide what to change
 
 
-#### Your Customers
+### Your Customers
 You are making changes to a system that is already providing value. Be mindful of the customer experience during a migration.
 
 Change is inevitable. Our systems need to be malleable and flexible. Refactoring is about code. Apply that to architecture as well.
@@ -140,7 +139,7 @@ You need to get good at incremental change of your architecture.
 > Build features for today and the platform for tomorrow
 >
 
-#### What do we extract first?
+### What do we extract first?
 
 Microservices should not share databases. It will become a bottleneck. We are looking for services to own their own data. 
 Early on pick low hanging fruit first.
@@ -167,9 +166,9 @@ We should get good at changing our systems in an incremental way.
 > If you do a big bang rewrite, all you get is a big bang - Martin Fowler
 >
 
-#### Patterns for Migrating to Microservices
+## Patterns for Migrating to Microservices
 
-## Strangler Pattern
+### Strangler Pattern
 
 This is based on nature. The strangler vine.
 
