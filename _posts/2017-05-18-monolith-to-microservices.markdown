@@ -42,9 +42,9 @@ Microservices are opininated whereas SOA which is not very prescriptive at all.
 A good analogy is being agile. You have different methodologies (microservices) of approaching being agile (service oriented).
 
 
-### Why use microservices?
+## Why use microservices?
 
-## Pros:
+### Pros:
 
  * _autonomy_: You allow individuals and teams to move quickly. You can also scale the team easier with a smaller codebase. More importantly, this provides
                a sense of __empowerment__. Decision making is moved to teams without the need to consult external teams that would be affected (with exceptions)
@@ -57,7 +57,7 @@ A good analogy is being agile. You have different methodologies (microservices) 
 
  * _scale_: You can easily scale your application. You can also achieve multi-tenacy a little easier.
 
-## Cons:
+### Cons:
  
  * _Cognitive Overload_: As your microservice architecture evolves, there is a lot of keep track of. Tooling, Configuration, Discovery, Routing, Observability,
                          Datastores, Orchestration & Deployment, Development, Policy: Architecture & Sec. Compliance.
@@ -67,7 +67,7 @@ A good analogy is being agile. You have different methodologies (microservices) 
 >     a monolith.
 >
 
-### Planning a Transition
+## Planning a Transition
 
 The first question you should yourself is _why do you want to adopt microservice?_ If you can answer this, then you know where to start.
 
@@ -84,14 +84,14 @@ A few possible goals:
 
 Once you know why you want something and have come up with a goal, you should come up with some metrics to track its progress.
 
-### Improve Autonomy
+## Improve Autonomy
 
 Let's say you decided you want to increase the freedom you give people to do their job. This has a number of immediate benefits:
  * Reduces the amount of sign off
  * Reduces amount of coordination
  * You can come up with new ideas and ship them faster
 
-## What can you track?
+### What can you track?
  * number of deployments
  * failure rate
  * number of meetings
@@ -105,6 +105,7 @@ Better Testing
 Functionally decompose your monolith to allow latency and load sensitive parts of your application be scaled independently.
 
 ### What can you track?
+
  * latency
  * load
  * failure rate
@@ -113,7 +114,7 @@ Functionally decompose your monolith to allow latency and load sensitive parts o
  * data partitioning
  * reverse proxies
 
-### People
+## People
 
 A lot of change involves people and teams. Some people will love this, others will not.
 
@@ -139,7 +140,7 @@ You need to get good at incremental change of your architecture.
 > Build features for today and the platform for tomorrow
 >
 
-### What do we extract first?
+## What do we extract first?
 
 Microservices should not share databases. It will become a bottleneck. We are looking for services to own their own data. 
 Early on pick low hanging fruit first.
