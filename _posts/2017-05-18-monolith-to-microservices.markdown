@@ -140,3 +140,38 @@ You need to get good at incremental change of your architecture.
 > Build features for today and the platform for tomorrow
 >
 
+#### What do we extract first?
+
+Microservices should not share databases. It will become a bottleneck. We are looking for services to own their own data. 
+Early on pick low hanging fruit first.
+
+> All things being equal, look for features and context with a low number of dependencies
+
+__It is a case of decomposition vs benefits of decomposition__
+
+Look at code liveliness to see waht code people are tracking. For scale? Identify your bottlenecks. Have 
+some automated tools. Getting tool and flame graphs to see what is intensely used.
+
+You must _continually measure_.
+
+You want to select something that is has an _increased benefit_ with _low difficulty_ (number of dependencies).
+
+Don't fall into the trap of building out more than one service. Deploy one first and understand it. Take time
+to stop and reflect.
+
+Get good at _incremental change_.
+
+We should get good at changing our systems in an incremental way.
+
+>
+> If you do a big bang rewrite, all you get is a big bang - Martin Fowler
+>
+
+#### Patterns for Migrating to Microservices
+
+## Strangler Pattern
+
+This is based on nature. The strangler vine.
+
+It wraps new functionality around our monolith.
+
