@@ -93,3 +93,7 @@ video {
     background-color: rgb(249 248 248);
     border: 1px solid #aeaeae;
 }
+
+.exp {
+    padding: 10px;
+}

@@ -16,22 +16,30 @@
     <div class="container">
         <h1>Crescent Academy Pick Up Link</h1>
         <div class="section">
-            Instead of scanning QR codes and submitting forms in the queue, use the steps below to create a link that will automatically open and submit when clicked.
+            Instead of scanning QR codes and submitting forms in the queue, use the steps below to create a permanent 1-click link that you can save and reuse. 
         </div>
         <div class="section">
             <div id="step1">
-                <span class="step-highlight">Step 1:</span> Upload your QR code. Taking a screenshot and it will work.
+                <span class="step-highlight">Step 1:</span> Take a screenshot of the PDF with the QR code and upload the image. 
                 <div id="my-qr-reader">
                 </div>
             </div>
             <div class="step2">
-                <span class="step-highlight">Step 2:</span> Copy the link below and save it to your notes app. During pick up, just click on the link. That's all. It will automatically open and submit the prefilled form.
+                <span class="step-highlight">Step 2:</span> Copy the link below and save it to your notes app. During pick up, just click on the link. It will automatically open and submit.
                 <div style="text-align:center">
                   <button id="copyButton" display="none" onclick="copyLink()">Copy to clipboard</button>
                 </div>
                 <div id="result"></div>
             </div>
         </div>
+         <div class="section">
+            <div class="exp">
+             <span class="step-highlight">Are you storing any data?</span> No. There is no backend processing or saving of images. This is all done on the front end. View the source <a href="https://github.com/imranraja85/imranraja85.github.io/tree/master/pickup">here</a>. 
+             </div>
+             <div class="exp">
+             <span class="step-highlight">How does it work?</span> It takes the string encoded in the QR code and <a href="https://github.com/imranraja85/imranraja85.github.io/blob/master/pickup/script.js#L17">replaces the action</a> to view the form with an action to submit the form.
+             </div>
+         </div>
     </div>
     <script
         src="https://unpkg.com/html5-qrcode">
