@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
-require 'json'
-require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+#require 'json'
+#require 'open-uri'
+#versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -13,7 +13,7 @@ versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.3.1"
+#gem "jekyll", "4.3.3"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
@@ -23,11 +23,13 @@ gem "minima", "~> 2.0"
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
-end
+#group :jekyll_plugins do
+#   gem "jekyll-feed", "~> 0.6"
+#end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'github-pages', versions['github-pages']
+#gem 'github-pages', versions['github-pages']
+
+gem "github-pages", "232", group: :jekyll_plugins
