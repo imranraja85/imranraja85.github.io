@@ -20,15 +20,18 @@ domReady(function () {
 
     let htmlscanner = new Html5QrcodeScanner(
         "my-qr-reader",
-        { fps: 10, qrbos: 250 }
+        { fps: 10, 
+          qrbox: 250,
+          supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_FILE]
+        }
     );
     htmlscanner.render(onScanSuccess);
 
 });
 
-    function copyLink() {
-       var copyText = document.getElementById("result");
-       navigator.clipboard.writeText(copyText.innerText);
-     
-       alert("Copied the link to your clipboard");
-    } 
+function copyLink() {
+   var copyText = document.getElementById("result");
+   navigator.clipboard.writeText(copyText.innerText);
+ 
+   alert("Copied the link to your clipboard");
+} 
