@@ -8,19 +8,17 @@ function onScanSuccess(decodeText, decodeResult) {
 }
 
 function initScanner(){
-let htmlscanner = new Html5QrcodeScanner(
-    "my-qr-reader",
-    { fps: 10, 
-      qrbox: 250,
-      facingMode: 'environment'
-    }
-);
+let htmlscanner = new Html5Qrcode("my-qr-reader");
 
+config = {}
 
+htmlscanner.start(
+    { facingMode: 'environment' },
+    config,
+    onScanSuccess
+)
 
-htmlscanner.render(onScanSuccess);
 }
-
 
 function copyLink() {
    var copyText = document.getElementById("result");
