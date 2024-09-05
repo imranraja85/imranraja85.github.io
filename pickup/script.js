@@ -11,9 +11,13 @@ function initScanner(){
 let htmlscanner = new Html5QrcodeScanner(
     "my-qr-reader",
     { fps: 10, 
-      qrbox: 250
+      qrbox: 250,
+      facingMode: 'environment'
     }
 );
+
+
+
 htmlscanner.render(onScanSuccess);
 }
 
