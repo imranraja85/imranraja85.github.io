@@ -4,17 +4,14 @@
 function onScanSuccess(decodeText, decodeResult) {
   result = decodeText.replace("viewform?", "formResponse?&submit=Submit&");
   document.getElementById("result").innerHTML = result;
-  alert("scan complete, go to step 3");
-}
-
-function initScanner() {
+  alert("scan complete, go to step 2");
 }
 
 function copyLink() {
   var copyText = document.getElementById("result");
   navigator.clipboard.writeText(copyText.innerText);
 
-  alert("Copied the link to your clipboard");
+  alert("Copied the link to your clipboard, go save it somewhere");
 }
 
 
