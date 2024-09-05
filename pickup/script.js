@@ -1,32 +1,22 @@
 // script.js file
 
-function domReady(fn) {
-    if (
-        document.readyState === "complete" ||
-        document.readyState === "interactive"
-    ) {
-        setTimeout(fn, 1000);
-    } else {
-        document.addEventListener("DOMContentLoaded", fn);
-    }
+// If found you qr code
+function onScanSuccess(decodeText, decodeResult) {
+    result = decodeText.replace("viewform?","formResponse?&submit=Submit&")
+    document.getElementById("result").innerHTML = result;
+    alert('scan complete, go to step 3')
 }
 
-domReady(function () {
-    // If found you qr code
-    function onScanSuccess(decodeText, decodeResult) {
-        result = decodeText.replace("viewform?","formResponse?&submit=Submit&")
-        document.getElementById("result").innerHTML = result;
+function initScanner(){
+let htmlscanner = new Html5QrcodeScanner(
+    "my-qr-reader",
+    { fps: 10, 
+      qrbox: 250
     }
+);
+htmlscanner.render(onScanSuccess);
+}
 
-    let htmlscanner = new Html5QrcodeScanner(
-        "my-qr-reader",
-        { fps: 10, 
-          qrbox: 250
-        }
-    );
-    htmlscanner.render(onScanSuccess);
-
-});
 
 function copyLink() {
    var copyText = document.getElementById("result");

@@ -20,12 +20,19 @@
         </div>
         <div class="section">
             <div id="step1">
-                <span class="step-highlight">Step 1:</span> Take a screenshot of the PDF with the QR code and upload the image. 
+            <span class="step-highlight">Step 1:</span>
+            Enable QR Scanner
+            <div style="text-align:center">
+            <button id="startScan" onclick="initScanner()">Enable QR Scanner</button>
+            </div>
+            </div>
+            <div id="step1">
+                <span class="step-highlight">Step 2:</span> Take a screenshot of the PDF with the QR code and upload the image. 
                 <div id="my-qr-reader">
                 </div>
             </div>
             <div class="step2">
-                <span class="step-highlight">Step 2:</span> Copy the link below and save it to your notes app. During pick up, just click on the link. It will automatically open and submit.
+                <span class="step-highlight">Step 3:</span> Copy the link below and save it to your notes app. During pick up, just click on the link. It will automatically open and submit.
                 <div style="text-align:center">
                   <button id="copyButton" display="none" onclick="copyLink()">Copy to clipboard</button>
                 </div>
