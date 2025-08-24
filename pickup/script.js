@@ -3,6 +3,7 @@
 // If found you qr code
 function onScanSuccess(decodeText, decodeResult) {
     result = decodeText.replace("viewform?","formResponse?&submit=Submit&")
+        .replace(" ","%20")
     document.getElementById("result").innerHTML = result;
     alert('scan complete, go to step 3')
 }
